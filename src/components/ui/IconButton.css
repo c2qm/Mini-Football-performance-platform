@@ -1,0 +1,29 @@
+.icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-pill);
+  border: none;
+  transition: transform var(--duration-fast) var(--ease-standard),
+    background-color var(--duration-fast) var(--ease-standard);
+  flex-shrink: 0;
+}
+
+.icon-btn:active {
+  transform: scale(0.92);
+}
+
+.icon-btn--default {
+  background: var(--color-surface-sunken);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border-strong);
+}
+
+.icon-btn--default:hover {
+  background: var(--color-accent-soft);
+}
+
+.icon-btn--filled {
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+}

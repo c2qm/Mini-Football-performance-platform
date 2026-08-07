@@ -1,0 +1,17 @@
+node_modules
+dist
+dist-ssr
+*.local
+.DS_Store
+
+# Capacitor native projects (generated via `npx cap add android`)
+android
+ios
+
+# Editor
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+# TypeScript build info
+*.tsbuildinfo

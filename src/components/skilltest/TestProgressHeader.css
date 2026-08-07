@@ -1,0 +1,11 @@
+.progress-header-container {
+  margin: 16px 0;
+}
+
+.progress-header-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+}

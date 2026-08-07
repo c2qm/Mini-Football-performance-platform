@@ -1,0 +1,25 @@
+.detail-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+}
+
+.detail-header__title {
+  flex: 1;
+  min-width: 0;
+  font-size: var(--fs-heading);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--color-text-primary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.detail-header__action {
+  flex-shrink: 0;
+  font-size: var(--fs-body-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}

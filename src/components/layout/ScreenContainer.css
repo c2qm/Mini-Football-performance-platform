@@ -1,0 +1,30 @@
+.screen {
+  flex: 1;
+  width: 100%;
+  padding: calc(var(--safe-top) + var(--space-6)) var(--space-5) var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  overflow-y: auto;
+  animation: screen-fade-in var(--duration-slow) var(--ease-standard);
+}
+
+.screen--nav-spacing {
+  padding-bottom: calc(var(--bottom-nav-height) + var(--safe-bottom) + var(--space-5));
+}
+
+.screen--no-padding {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+@keyframes screen-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

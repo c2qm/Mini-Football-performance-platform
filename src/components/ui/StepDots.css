@@ -1,0 +1,22 @@
+.step-dots {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.step-dots__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-pill);
+  background: var(--color-border-strong);
+  transition: all var(--duration-normal) var(--ease-standard);
+}
+
+.step-dots__dot--done {
+  background: var(--color-accent);
+}
+
+.step-dots__dot--active {
+  width: 18px;
+  background: var(--color-accent);
+}

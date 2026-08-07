@@ -1,0 +1,37 @@
+.skill-test-hub {
+  gap: var(--space-5);
+}
+
+.skill-test-hub__subtitle {
+  font-size: var(--fs-body-sm);
+  color: var(--color-text-tertiary);
+  margin-top: var(--space-2);
+}
+
+.skill-test-hub__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-3);
+}
+
+.skill-test-hub__card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-2);
+  min-height: 96px;
+}
+
+.skill-test-hub__card--disabled {
+  opacity: 0.55;
+}
+
+.skill-test-hub__emoji {
+  font-size: 24px;
+}
+
+.skill-test-hub__label {
+  font-size: var(--fs-body-sm);
+  font-weight: 700;
+  color: var(--color-text-primary);
+}

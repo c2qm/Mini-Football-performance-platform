@@ -1,0 +1,115 @@
+/* ── Light theme ── */
+:root,
+[data-theme="light"] {
+  --color-bg: #ffffff;
+  --color-surface: #f7f7f5;
+  --color-surface-sunken: #f0f0ee;
+
+  --color-text-primary: #111111;
+  --color-text-secondary: #555555;
+  --color-text-tertiary: #8a8a8a;
+  --color-text-inverse: #ffffff;
+
+  --color-border: #f0f0f0;
+  --color-border-strong: #ebebeb;
+
+  --color-accent: #2d7a5b;
+  --color-accent-soft: #ebf5f0;
+  --color-accent-text: #1e5c44;
+
+  --tag-green-bg: #ebf5f0;
+  --tag-green-fg: #1e5c44;
+
+  --tag-yellow-bg: #fff4eb;
+  --tag-yellow-fg: #7a4a1e;
+
+  --tag-blue-bg: #ebf0ff;
+  --tag-blue-fg: #3050e0;
+
+  --tag-red-bg: #fdebeb;
+  --tag-red-fg: #b23a3a;
+
+  --tag-purple-bg: #f1eafb;
+  --tag-purple-fg: #6e3dba;
+
+  --tag-orange-bg: #fff4e0;
+  --tag-orange-fg: #b8791a;
+
+  --tag-teal-bg: #e7f6f4;
+  --tag-teal-fg: #1f8073;
+
+  --statusbar: #111111;
+}
+
+/* ── Dark theme ── */
+[data-theme="dark"] {
+  --color-bg: #0f0f0f;
+  --color-surface: #1a1a1a;
+  --color-surface-sunken: #222222;
+
+  --color-text-primary: #f0f0f0;
+  --color-text-secondary: #aaaaaa;
+  --color-text-tertiary: #666666;
+  --color-text-inverse: #ffffff;
+
+  --color-border: #1e1e1e;
+  --color-border-strong: #2a2a2a;
+
+  --color-accent: #3d9b72;
+  --color-accent-soft: #162a21;
+  --color-accent-text: #5dc495;
+
+  --tag-green-bg: #162a21;
+  --tag-green-fg: #5dc495;
+
+  --tag-yellow-bg: #251a08;
+  --tag-yellow-fg: #e0a060;
+
+  --tag-blue-bg: #16203a;
+  --tag-blue-fg: #7a97f0;
+
+  --tag-red-bg: #2a1414;
+  --tag-red-fg: #e08080;
+
+  --tag-purple-bg: #221a30;
+  --tag-purple-fg: #b295e8;
+
+  --tag-orange-bg: #2a1d08;
+  --tag-orange-fg: #e0a850;
+
+  --tag-teal-bg: #102420;
+  --tag-teal-fg: #5cc4b4;
+
+  --statusbar: #f0f0f0;
+}
+
+/* ── Legacy aliases & Extra UI shorthands (fully synchronized) ── */
+:root,
+[data-theme="light"],
+[data-theme="dark"] {
+  --bg: var(--color-bg);
+  --surface: var(--color-surface);
+  --card: var(--color-surface-sunken);
+  
+  --text: var(--color-text-primary);
+  --text2: var(--color-text-secondary);
+  --muted: var(--color-text-tertiary);
+  
+  --border: var(--color-border-strong);
+  --bordersoft: var(--color-border);
+  
+  --green: var(--color-accent);
+  --greenbg: var(--color-accent-soft);
+  --greentext: var(--color-accent-text);
+  
+  --amber: var(--tag-yellow-fg);
+  --amberbg: var(--tag-yellow-bg);
+  --ambertext: var(--tag-yellow-fg);
+
+  /* إضافات جديدة لضمان عدم حصول أي خطأ في الثيمات الفرعية */
+  --orange: var(--tag-orange-fg);
+  --orangebg: var(--tag-orange-bg);
+  
+  --red: var(--tag-red-fg);
+  --redbg: var(--tag-red-bg);
+}

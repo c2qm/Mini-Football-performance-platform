@@ -1,0 +1,26 @@
+.segmented-control {
+  display: flex;
+  align-items: center;
+  background: var(--color-surface);
+  border-radius: var(--radius-md);
+  padding: 4px;
+  gap: 2px;
+}
+
+.segmented-control__option {
+  flex: 1;
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-sm);
+  border: none;
+  background: transparent;
+  font-size: var(--fs-body-sm);
+  font-weight: 600;
+  color: var(--color-text-tertiary);
+  transition: background-color var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard);
+}
+
+.segmented-control__option--active {
+  background: var(--color-accent);
+  color: var(--color-text-inverse);
+}

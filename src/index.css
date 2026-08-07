@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap');
+@import 'tailwindcss';
+@import './styles/tokens.css';
+@import './styles/theme.css';
+
+@theme {
+  --font-sans: 'DM Sans', sans-serif;
+}
+
+/* ── Keyframes ── */
+@keyframes fadeSlideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.93); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes slideUp {
+  from { transform: translateY(100%); }
+  to   { transform: translateY(0); }
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.3; }
+}
+@keyframes ripple {
+  0%   { transform: scale(0); opacity: 0.4; }
+  100% { transform: scale(2.5); opacity: 0; }
+}
+
+/* ── Animation classes (مع تسريع الـ GPU لمنع الترميش على الهواتف) ── */
+.anim-up, .anim-scale, .anim-fade, .anim-sheet {
+  will-change: transform, opacity;
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+}
+
+.anim-up   { animation: fadeSlideUp 0.4s var(--ease-standard) both; }
+.anim-fade { animation: fadeIn       var(--duration-normal) ease both; }
+.anim-scale{ animation: scaleIn     0.35s var(--ease-standard) both; }
+.anim-sheet{ animation: slideUp     0.38s var(--ease-standard) both; }
+.anim-blink{ animation: blink       1.6s ease-in-out infinite; }
+
+/* Stagger delays */
+.d0  { animation-delay:   0ms; }
+.d1  { animation-delay:  60ms; }
+.d2  { animation-delay: 120ms; }
+.d3  { animation-delay: 180ms; }
+.d4  { animation-delay: 240ms; }
+.d5  { animation-delay: 300ms; }
+.d6  { animation-delay: 360ms; }
+.d7  { animation-delay: 420ms; }
+.d8  { animation-delay: 480ms; }
+
+/* Press feedback */
+.press { transition: transform var(--duration-fast) ease, opacity var(--duration-fast) ease; cursor: pointer; }
+.press:active { transform: scale(0.95); opacity: 0.8; }
+
+.smooth { transition: all var(--duration-normal) ease; }
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+}
+
+/* ── True full-screen root, no outer card/frame ── */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+html {
+  height: 100dvh;
+}
+body {
+  background-color: #FFFFFF; /* sane fallback before theme mounts, avoids a flash */
+  overscroll-behavior-y: none;
+  overflow: hidden;
+}
+#root {
+  height: 100dvh;
+}
+
+/* ── App shell (RootLayout) ── */
+.app-shell {
+  height: 100dvh;
+  width: 100%;
+  max-width: var(--max-content-width);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background: var(--color-bg);
+  color: var(--color-text-primary);
+  transition: background-color var(--duration-normal) var(--ease-standard);
+  transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+.scrollbar-hide::-webkit-scrollbar { display: none; }

@@ -1,0 +1,25 @@
+.instruction-card {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+.instruction-label {
+  font-size: 12px;
+  color: var(--color-text-tertiary);
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.instruction-title {
+  font-size: 22px;
+  font-weight: 800;
+  margin-top: 4px;
+  margin-bottom: 0;
+}
+
+.instruction-subtitle {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  margin-top: 4px;
+  margin-bottom: 0;
+}

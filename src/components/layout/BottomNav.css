@@ -1,0 +1,53 @@
+/* BottomNav.css */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width: 100%;
+  max-width: var(--max-content-width);
+  height: var(--bottom-nav-height);
+  padding-bottom: var(--safe-bottom);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+  z-index: 20;
+  flex-shrink: 0;
+  
+  /* منع أي انيميشن أو تمطط أثناء السكرول أو تغير أبعاد المتصفح */
+  transition: none !important;
+  transform: none !important;
+}
+
+.bottom-nav__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: var(--color-text-tertiary);
+  padding: var(--space-2) var(--space-4);
+  border-radius: var(--radius-md);
+  min-width: 52px;
+  flex-shrink: 0;
+  
+  /* قصر الانتقال على اللون فقط لتجنب أي تأثير على الحجم */
+  transition: color var(--duration-fast) var(--ease-standard);
+}
+
+.bottom-nav__item:active {
+  transform: scale(0.92);
+}
+
+.bottom-nav__item--active {
+  color: var(--color-accent);
+}
+
+.bottom-nav__label {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}

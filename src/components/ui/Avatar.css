@@ -1,0 +1,21 @@
+.avatar {
+  border-radius: var(--radius-pill);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-weight: 700;
+}
+
+.avatar--image {
+  object-fit: cover;
+}
+
+.avatar--fallback {
+  background: var(--color-accent-soft);
+  color: var(--color-accent-text);
+}
+
+.avatar--preset {
+  color: var(--color-text-inverse);
+}

@@ -1,0 +1,27 @@
+.result-content {
+  text-align: center;
+  margin-top: 10%;
+}
+
+.result-title {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.result-score-card {
+  margin-bottom: 24px;
+}
+
+.result-score-label {
+  font-size: 14px;
+  color: var(--color-text-tertiary);
+  margin: 0 0 4px 0;
+}
+
+.result-score-value {
+  font-size: 48px;
+  font-weight: 800;
+  color: var(--color-accent);
+  margin: 0;
+}
